@@ -1,9 +1,33 @@
-.button {
+body{
+    background-color: rgb(146, 132, 102);
+}
+
+h1 {
+    text-align: center;
+    color:rgb(82, 62, 31);
+    
+}
+.button-div{
+    text-align: center;
+}
+#button {
     color: white;
     background-color: red;
     width: 100px;
     height: 50px;
     border-color: red;
     align-items: center;
-    margin: 400px;
+}
+
+.div-style {
+    background-color: bisque;
+    border-color: rgb(82, 62, 31);
+    border-style: double;
+    border: 100px;
+    display: none;
+}
+
+h3 {
+    color:rgb(82, 62, 31);
+    text-align: center;
 }
