@@ -2,26 +2,39 @@
 var buttonEl = document.querySelector("#button");
 
 buttonEl.addEventListener("click", function() {
-    alert("button clicked");
-    return alert
-  });
+  alert("The quiz has started");
+  displayContent()
+  
+});
+
+var correctAnswer = document.querySelector("#correct")
 
 
-//display question 1
-
-var answer = ""
-function questionOne () {
-    
-};
-    // tell user whether the answer was right or wrong
-    //proceed to next question
-// display question 2
-//dislay question 3
-//display question 4
-//disp;lay question 5
-
-const element = document.getElementById(button);
+function displayContent() {
+  document.getElementById("qOne").style.visibility = "block";
+}
 
 
-document.getElementById(button).innerHTML =
-"I'm stuck"
+function correct() {
+  // check if answer is right
+  if (correctAnswer === true) {
+    alert("You are correct!")
+  } else {
+    alert("You are wrong!")
+  }
+
+
+  //display you are correct
+}
+
+
+correctAnswer.addEventListener("click", function () {
+  alert("you are right")
+})
+
+
+//display question 
+// tell user whether the answer was right or wrong
+// log points for correct answer
+//proceed to next question
+// let user know score

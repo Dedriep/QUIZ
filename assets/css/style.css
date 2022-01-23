@@ -5,7 +5,7 @@ body{
 h1 {
     text-align: center;
     color:rgb(82, 62, 31);
-    
+       
 }
 .button-div{
     text-align: center;
@@ -24,10 +24,31 @@ h1 {
     border-color: rgb(82, 62, 31);
     border-style: double;
     border: 100px;
-    display: none;
+    
 }
 
 h3 {
     color:rgb(82, 62, 31);
     text-align: center;
+}
+
+#qOne  {
+    display: none;
+
+}
+
+#qTwo  {
+    display: none;
+}
+
+#qThree {
+    display: none;
+}
+
+#qFour {
+    display:none;
+}
+
+#qFive {
+    display: none;
 }
