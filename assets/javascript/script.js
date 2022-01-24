@@ -72,8 +72,8 @@ function quizTime () {
   },
 ];
 
-  for ( var i= 0; i < questions.lenght; i++) {
-    
+  for ( var i= 0; i < questions.length; i++) {
+      
   }
 }
 

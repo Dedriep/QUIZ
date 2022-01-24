@@ -24,6 +24,8 @@ h1 {
     border-color: rgb(82, 62, 31);
     border-style: double;
     border: 100px;
+    display: none;
+    
     
 }
 
