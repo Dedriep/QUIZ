@@ -14,66 +14,25 @@
         <h1> JAVASCRIPT QUIZ</h1>
     </div>
 
-    <div class="button-div">
+    <div class="button-div" class= "start-button">
         <button id="button"> Start Quiz!</button>
     </div>
+
+    <div id="countdown"></div>
 
     <div id="new-list"></div>
 
     <div class="div-style div1" id="qOne">
-        <h3>What is an array?</h3>
+        <h3 id="question-header"></h3>
         <form>
-            <input type="radio" name="answer 1" value="correct" id= "correct"> A list of items </br>
-            <input type="radio" name="answer 2" value="wrong"> blank</br>
-            <input type="radio" name="answer 3" value="wrong"> blank </br>
-            <input type="radio" name="answer 4" value="wrong"> blank </br>
+            <input type="radio" name="answer"  class= "answer" > </br>
+            <input type="radio" name="answer"  class= "answer"> </br>
+            <input type="radio" name="answer"  class= "answer">  </br>
+        </form>
 
-        
-        </form>
+        <div id="your-score"></div>
     </div>
-    <div class="div-style div2" id="qTwo">
-        <h3>What is console.log used for?</h3>
-        <form>
-            <input type="radio" name="answer 1" value="correct" id= "correct"> </br>
-            <input type="radio" name="answer 2" value="wrong"> blank</br>
-            <input type="radio" name="answer 3" value="wrong"> blank </br>
-            <input type="radio" name="answer 4" value="wrong"> blank </br>
 
-        
-        </form>
-    </div>
-    <div class="div-style div3" id="qThree">
-        <h3> What does the || symbol mean? </h3>
-        <form>
-            <input type="radio" name="answer 1" value="correct" id= "correct"> </br>
-            <input type="radio" name="answer 2" value="wrong"> blank</br>
-            <input type="radio" name="answer 3" value="wrong"> blank </br>
-            <input type="radio" name="answer 4" value="wrong"> blank </br>
-
-        
-        </form>
-    </div>
-    <div class="div-style div4" id="qFour">
-        <h3> What does the && symbol mean?</h3>
-        <form>
-            <input type="radio" name="answer 1" value="correct" id= "correct"> </br>
-            <input type="radio" name="answer 2" value="wrong"> blank</br>
-            <input type="radio" name="answer 3" value="wrong"> blank </br>
-            <input type="radio" name="answer 4" value="wrong"> blank </br>
-
-        
-        </form>
-    </div>
-    <div class="div-style div5" id="qFive">
-        <h3>How would you code greater than or equal to?</h3>
-        <form>
-            <input type="radio" name="answer 1" value="correct" id= "correct"> </br>
-            <input type="radio" name="answer 2" value="wrong"> blank</br>
-            <input type="radio" name="answer 3" value="wrong"> blank </br>
-            <input type="radio" name="answer 4" value="wrong"> blank </br>
-        
-        </form>
-    </div>
 <script src="assets/javascript/script.js"  > </script>
 </body>
 
