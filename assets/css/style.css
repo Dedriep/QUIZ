@@ -39,18 +39,13 @@ h3 {
 
 }
 
-#qTwo  {
-    display: none;
+#qform {
+    text-align: center;
 }
 
-#qThree {
+#your-score {
+    color: rgb(82, 62, 31);
     display: none;
-}
+    background-color: bisque;
 
-#qFour {
-    display:none;
-}
-
-#qFive {
-    display: none;
 }
