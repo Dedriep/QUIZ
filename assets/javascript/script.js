@@ -14,31 +14,31 @@ const questions =
     {
       question: "What is an array?",
       options: ["A special type of variable that can hold more than one value", "A CSS property?", "I don't know"],
-      Answer: 0,
+      Answer: "A special type of variable that can hold more than one value"
     },
 
     {
       question: "What is console.log used for?",
       options: ["changing visability on the document", "Debugging code", "I don't know"],
-      Answer: 1,
+      Answer: "Debugging code"
     },
 
     {
       question: "What does the || symbol mean?",
       options: ["OR", "AND", "I don't know"],
-      Answer: 0,
+      Answer: "OR"
     },
 
     {
       question: " What does the && symbol mean?",
       options: ["AND", "IF", "TRUE"],
-      Answer: 0,
+      Answer: "AND"
     },
 
     {
       question: "How would you code greater than or equal to?",
       options: ["<", "+_", ">="],
-      Answer: 2,
+      Answer: ">="
     },
   ] ;
 
@@ -89,14 +89,14 @@ function displayContent() {
   //reset the feedback element to blank text 
   document.getElementById("feedback").textContent = "";
 
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 3; i++) {
 
     if (i <= 5) {
       //display text on the radio buttons 
       console.log(answerEl[i]);
       //Display text of the button 
-      answerEl[i].textContent = questions[i].options[i];
-      answerEl[i].value = questions[i].options[i];
+      answerEl[i].textContent = questions[counter].options[i];
+      answerEl[i].value = questions[counter].options[i];
 
       // a1.value = questions[0].options[0];
       // a1.textContent = questions[0].options[0];
@@ -114,7 +114,7 @@ function displayContent() {
     }
 
     if (counter === 6) { 
-      endOfQuiz()
+      return endOfQuiz()
     }
     
 
