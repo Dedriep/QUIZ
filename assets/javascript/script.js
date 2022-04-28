@@ -9,7 +9,6 @@ var a1 = document.querySelector('#a1')
 var a2 = document.querySelector('#a2')
 var a3 = document.querySelector('#a3')
 
-
 const questions =
   [
     {
@@ -41,7 +40,7 @@ const questions =
       options: ["<", "+_", ">="],
       Answer: 2,
     },
-  ];
+  ] ;
 
 
 
@@ -96,25 +95,25 @@ function displayContent() {
       //display text on the radio buttons 
       console.log(answerEl[i]);
       //Display text of the button 
-      // answerEl[i].textContent = questions[i].options[i];
-      // answerEl[i].value = questions[i].options[i];
+      answerEl[i].textContent = questions[i].options[i];
+      answerEl[i].value = questions[i].options[i];
 
-      a1.value = questions[i].options[i];
-      a1.textContent = questions[0].options[0];
-
-
-      a2.value = questions[i].options[i];
-      a2.textContent = questions[1].options[1];
+      // a1.value = questions[0].options[0];
+      // a1.textContent = questions[0].options[0];
 
 
-      a3.value = questions[i].options[i];
-      a3.textContent = questions[2].options[2];
+      // a2.value = questions[1].options[1];
+      // a2.textContent = questions[1].options[1];
+
+
+      // a3.value = questions[2].options[2];
+      // a3.textContent = questions[2].options[2];
 
       //Add event listiner 
       answerEl[i].addEventListener("click", validateANs);
     }
 
-    if (i = 6) { 
+    if (counter === 6) { 
       endOfQuiz()
     }
     
