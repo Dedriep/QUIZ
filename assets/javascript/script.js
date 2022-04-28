@@ -3,7 +3,7 @@ var buttonEl = document.querySelector("#button");
 var questionEl = document.querySelector("#question-header");
 var answerEl = document.querySelectorAll(".answer")
 var counter = 0;
-var score = "";
+var score = null;
 var displayScore = document.querySelector("your-score")
 var a1 = document.querySelector('#a1')
 var a2 = document.querySelector('#a2')
@@ -40,7 +40,7 @@ const questions =
       options: ["<", "+_", ">="],
       Answer: ">="
     },
-  ] ;
+  ];
 
 
 
@@ -55,20 +55,16 @@ function startClock() {
 
 }
 
-//for (var i = 0; i < answerEl.length; i++) {
-//answerEl[i].addEventListener("click", function (event) {
 function validateANs(event) {
   event.preventDefault();
   alert(event.target.value, "Button clicked")  //process answer increment counter to next question
 
   if (event.target.value === questions[counter].Answer) {
     window.alert("Correct")
-    // document.getElementById("feedback").textContent = "Correct";
     score += 10
 
   } else {
     window.alert("wrong")
-    // document.getElementById("feedback").textContent = "Wrong";
     score -= 5;
   }
 
@@ -87,66 +83,52 @@ function displayContent() {
   console.log("answerEl", answerEl);
 
   //reset the feedback element to blank text 
-  document.getElementById("feedback").textContent = "";
+  // document.getElementById("feedback").textContent = "";
 
-  for (var i = 0; i < 3; i++) {
 
-    if (i <= 5) {
+  if (counter === 4) {
+    return endOfQuiz()
+  } else {
+
+    for (var i = 0; i < 3; i++) {
+
+      (i <= 5)
       //display text on the radio buttons 
       console.log(answerEl[i]);
       //Display text of the button 
       answerEl[i].textContent = questions[counter].options[i];
       answerEl[i].value = questions[counter].options[i];
 
-      // a1.value = questions[0].options[0];
-      // a1.textContent = questions[0].options[0];
 
-
-      // a2.value = questions[1].options[1];
-      // a2.textContent = questions[1].options[1];
-
-
-      // a3.value = questions[2].options[2];
-      // a3.textContent = questions[2].options[2];
 
       //Add event listiner 
       answerEl[i].addEventListener("click", validateANs);
     }
 
-    if (counter === 6) { 
-      return endOfQuiz()
-    }
-    
-
   }
-
+ console.log(score)
 }
 
 function endOfQuiz() {
 
-  //document.querySelector("your-score").style.display = "block";
-  document.getElementById("qOne").style.display = "block";
+  // document.getElementById("your-score").style.display = "block";
 
+  document.getElementById("qOne").style.display = "none";
+  var initials = window.prompt(`Your score is ${score}. Please enter your name to save your data`)
 
+  var saveData = {
+    name: initials,
+
+    finalScore: score
+  }
+
+  var playerData = []
+  playerData.push(saveData)
+  console.log(saveData)
+
+  localStorage.setItem("PlayerData", JSON.stringify(playerData))
 
 }
 
 
-// lets user know that answer was right or wrong
 
-
-
-
-
-
-//  function w/ ARRAY TO HOLD QUESTIONS
-
-
-
-//display question
-// tell user whether the answer was right or wrong
-// log points for correct answer
-//proceed to next question
-// let user know score
-
-localStorage.setItem("player")
