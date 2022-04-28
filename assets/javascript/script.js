@@ -9,6 +9,7 @@ var a1 = document.querySelector('#a1')
 var a2 = document.querySelector('#a2')
 var a3 = document.querySelector('#a3')
 
+
 const questions =
   [
     {
@@ -122,8 +123,18 @@ function endOfQuiz() {
     finalScore: score
   }
 
-  var playerData = []
-  playerData.push(saveData)
+
+
+  if (playerData){
+    console.log(playerData)
+    playerData.push(saveData)
+
+
+  } else {
+   var playerData =[]
+
+  }
+
   console.log(saveData)
 
   localStorage.setItem("PlayerData", JSON.stringify(playerData))
