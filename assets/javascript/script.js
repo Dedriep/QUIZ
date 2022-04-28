@@ -5,6 +5,10 @@ var answerEl = document.querySelectorAll(".answer")
 var counter = 0;
 var score = "";
 var displayScore = document.querySelector("your-score")
+var a1 = document.querySelector('#a1')
+var a2 = document.querySelector('#a2')
+var a3 = document.querySelector('#a3')
+
 
 const questions =
   [
@@ -58,14 +62,17 @@ function validateANs(event) {
   event.preventDefault();
   alert(event.target.value, "Button clicked")  //process answer increment counter to next question
 
-  if (event.target.value === questions[counter].answer) {
-    document.getElementById("feedback").textContent = "Correct";
+  if (event.target.value === questions[counter].Answer) {
+    window.alert("Correct")
+    // document.getElementById("feedback").textContent = "Correct";
     score += 10
 
   } else {
-    document.getElementById("feedback").textContent = "Wrong";
+    window.alert("wrong")
+    // document.getElementById("feedback").textContent = "Wrong";
     score -= 5;
   }
+
   //Move to next question 
   counter += 1
   displayContent();
@@ -85,17 +92,29 @@ function displayContent() {
 
   for (var i = 0; i < 5; i++) {
 
-    if (i <= 4) {
+    if (i <= 5) {
       //display text on the radio buttons 
       console.log(answerEl[i]);
       //Display text of the button 
-      answerEl[i].textContent = questions[counter].options[i];
-      answerEl[i].value = questions[counter].options[i];
+      // answerEl[i].textContent = questions[i].options[i];
+      // answerEl[i].value = questions[i].options[i];
+
+      a1.value = questions[i].options[i];
+      a1.textContent = questions[0].options[0];
+
+
+      a2.value = questions[i].options[i];
+      a2.textContent = questions[1].options[1];
+
+
+      a3.value = questions[i].options[i];
+      a3.textContent = questions[2].options[2];
+
       //Add event listiner 
       answerEl[i].addEventListener("click", validateANs);
     }
 
-    if (i = 5) { 
+    if (i = 6) { 
       endOfQuiz()
     }
     
@@ -106,12 +125,14 @@ function displayContent() {
 
 function endOfQuiz() {
 
-  document.querySelector("your-score").style.display = "block";
+  //document.querySelector("your-score").style.display = "block";
   document.getElementById("qOne").style.display = "block";
 
 
 
 }
+
+
 // lets user know that answer was right or wrong
 
 
