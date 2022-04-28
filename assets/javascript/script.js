@@ -119,24 +119,19 @@ function endOfQuiz() {
 
   var saveData = {
     name: initials,
-
     finalScore: score
   }
 
+if (playerData){
+  console.log(playerData)
 
-
-  if (playerData){
-    console.log(playerData)
-    playerData.push(saveData)
-
-
-  } else {
-   var playerData =[]
+} else {
+var playerData =[]
 
   }
 
   console.log(saveData)
-
+  playerData.push(saveData)
   localStorage.setItem("PlayerData", JSON.stringify(playerData))
 
 }
