@@ -47,13 +47,22 @@ const questions =
 
 buttonEl.addEventListener("click", function (event) {
   event.preventDefault();
-  alert("The quiz has started");
+  alert("The quiz has started. you have 60 seconds to complete it.");
   displayContent()
   startClock();
 });
 
 function startClock() {
+  var sec = 60
+  var startClock = setInterval( ()=> {
+    document.getElementById('countdown').innerHTML = `You have 00:${sec} seconds left!`
+    sec --
+    if (sec < 0){
+      clearInterval(startClock)
+      endOfQuiz()
+    }
 
+  }, 1000)
 }
 
 function validateANs(event) {
@@ -122,13 +131,17 @@ function endOfQuiz() {
     finalScore: score
   }
 
-if (playerData){
-  console.log(playerData)
+// if (playerData){
+//   console.log(playerData)
 
-} else {
-var playerData =[]
+// } else {
+// var playerData =[]
 
-  }
+  // }
+
+  var playerData =[]
+  playerData = JSON.parse(localStorage.getItem('PlayerData')) || [];
+
 
   console.log(saveData)
   playerData.push(saveData)
